@@ -62,13 +62,22 @@ print("\n")
 
 #5. Write a function to find factorial of a number but also store the factorials calculated in a dictionary
 
-numx = int(input("enter a number:"))
+
+numx = int(input("enter a countof numbers:"))
+
 f=0
+
 def fact ( numbr ):
     if (numbr == 0):
         return(1)
     else :
-        return(numbr*fact(numbr-1))
-print("the factorial of the number %d is :"%(numx))
-print(fact(numx))
-          
+        #print("the factorial of the number %d is "%(numbr))
+        y=((numbr*fact(numbr-1)))
+        return(y)
+    
+num = numx
+
+factorial = fact(numx)
+dict = {num:factorial}
+print(dict)
+    
